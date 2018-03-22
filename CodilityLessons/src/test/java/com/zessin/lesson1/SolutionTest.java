@@ -6,10 +6,11 @@ import junit.framework.TestSuite;
 
 public class SolutionTest extends TestCase {
 
-    Solution solution;
+    private final Solution solution;
 
     public SolutionTest(String testName) {
         super(testName);
+
         solution = new Solution();
     }
 
