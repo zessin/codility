@@ -3,7 +3,7 @@ package com.zessin.lesson1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+public class BinaryGap {
 
     public int solution(int number) {
         String binaryString = Integer.toBinaryString(number);

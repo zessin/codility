@@ -4,18 +4,18 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-public class SolutionTest extends TestCase {
+public class BinaryGapTest extends TestCase {
 
-    private final Solution solution;
+    private final BinaryGap binaryGap;
 
-    public SolutionTest(String testName) {
+    public BinaryGapTest(String testName) {
         super(testName);
 
-        solution = new Solution();
+        binaryGap = new BinaryGap();
     }
 
     public static Test suite() {
-        return new TestSuite(SolutionTest.class);
+        return new TestSuite(BinaryGapTest.class);
     }
 
     public void testCase1() {
@@ -59,7 +59,7 @@ public class SolutionTest extends TestCase {
     }
 
     private int findLongestGap(int number) {
-        return solution.solution(number);
+        return binaryGap.solution(number);
     }
 
     private void assertResults(int number, int expectedLongestBinaryGap, int actualLongestBinaryGap) {
