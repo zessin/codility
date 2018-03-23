@@ -1,7 +1,7 @@
 package com.zessin.lesson2;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -48,15 +48,15 @@ import java.util.List;
 public class OddOccurrencesInArray {
 
     public int solution(int[] array) {
-        List<Integer> elementsInArray = new ArrayList<>();
+        Map<Integer, Integer> elementsInArray = new HashMap<>();
 
         for (int i = 0; i < array.length; i++) {
-            if (!elementsInArray.remove(new Integer(array[i]))) {
-                elementsInArray.add(array[i]);
+            if (elementsInArray.remove(array[i]) == null) {
+                elementsInArray.put(array[i], i);
             }
         }
 
-        return !elementsInArray.isEmpty() ? elementsInArray.get(0) : 0;
+        return !elementsInArray.isEmpty() ? elementsInArray.keySet().iterator().next() : 0;
     }
 
 }
