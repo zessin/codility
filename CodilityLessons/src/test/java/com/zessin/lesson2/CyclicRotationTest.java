@@ -4,16 +4,16 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-public class SolutionTest extends TestCase {
+public class CyclicRotationTest extends TestCase {
 
     private final int arraySize = 3;
-    private final Solution solution;
+    private final CyclicRotation cyclicRotation;
     private final int[] originalArray;
 
-    public SolutionTest(String testName) {
+    public CyclicRotationTest(String testName) {
         super(testName);
 
-        solution = new Solution();
+        cyclicRotation = new CyclicRotation();
         originalArray = new int[arraySize];
         originalArray[0] = 10;
         originalArray[1] = 20;
@@ -21,7 +21,7 @@ public class SolutionTest extends TestCase {
     }
 
     public static Test suite() {
-        return new TestSuite(SolutionTest.class);
+        return new TestSuite(CyclicRotationTest.class);
     }
 
     public void testNoRotations() {
@@ -32,7 +32,7 @@ public class SolutionTest extends TestCase {
         expectedArray[1] = 20;
         expectedArray[2] = 30;
 
-        int[] rotatedArray = solution.solution(originalArray, numberOfRotations);
+        int[] rotatedArray = cyclicRotation.solution(originalArray, numberOfRotations);
 
         assertResults(expectedArray, rotatedArray);
     }
@@ -45,7 +45,7 @@ public class SolutionTest extends TestCase {
         expectedArray[1] = 10;
         expectedArray[2] = 20;
 
-        int[] rotatedArray = solution.solution(originalArray, numberOfRotations);
+        int[] rotatedArray = cyclicRotation.solution(originalArray, numberOfRotations);
 
         assertResults(expectedArray, rotatedArray);
     }
@@ -58,7 +58,7 @@ public class SolutionTest extends TestCase {
         expectedArray[1] = 30;
         expectedArray[2] = 10;
 
-        int[] rotatedArray = solution.solution(originalArray, numberOfRotations);
+        int[] rotatedArray = cyclicRotation.solution(originalArray, numberOfRotations);
 
         assertResults(expectedArray, rotatedArray);
     }
@@ -71,7 +71,7 @@ public class SolutionTest extends TestCase {
         expectedArray[1] = 20;
         expectedArray[2] = 30;
 
-        int[] rotatedArray = solution.solution(originalArray, numberOfRotations);
+        int[] rotatedArray = cyclicRotation.solution(originalArray, numberOfRotations);
 
         assertResults(expectedArray, rotatedArray);
     }
@@ -84,7 +84,7 @@ public class SolutionTest extends TestCase {
         expectedArray[1] = 10;
         expectedArray[2] = 20;
 
-        int[] rotatedArray = solution.solution(originalArray, numberOfRotations);
+        int[] rotatedArray = cyclicRotation.solution(originalArray, numberOfRotations);
 
         assertResults(expectedArray, rotatedArray);
     }

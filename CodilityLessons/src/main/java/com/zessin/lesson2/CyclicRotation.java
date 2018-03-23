@@ -1,6 +1,6 @@
 package com.zessin.lesson2;
 
-public class Solution {
+public class CyclicRotation {
 
     public int[] solution(int[] originalArray, int numberOfRotations) {
         int[] rotatedArray = new int[originalArray.length];
