@@ -33,9 +33,6 @@ package com.zessin.lesson3;
     expected worst-case space complexity is O(1).
     Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 
-    85 - 10 = 75
-    75 / 30 = 2,5
-
  * @author Zessin
  *
  */
