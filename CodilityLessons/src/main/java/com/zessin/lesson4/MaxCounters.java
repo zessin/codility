@@ -66,18 +66,22 @@ public class MaxCounters {
     public int[] solution(int numberOfCounters, int[] array) {
         int[] arrayOfCounters = new int[numberOfCounters];
         int maxValue = 0;
+        int lastMaxValue = 0;
 
         for (int i = 0; i < array.length; i++) {
             int counterIndex = array[i] - 1;
 
             if (array[i] <= numberOfCounters) {
+                arrayOfCounters[counterIndex] = Math.max(arrayOfCounters[counterIndex] , lastMaxValue);
                 arrayOfCounters[counterIndex]++;
-                maxValue = arrayOfCounters[counterIndex] > maxValue ? arrayOfCounters[counterIndex] : maxValue;
+                maxValue = Math.max(arrayOfCounters[counterIndex], maxValue);
             } else {
-                for (int j = 0; j < arrayOfCounters.length; j++) {
-                    arrayOfCounters[j] = maxValue;
-                }
+                lastMaxValue = maxValue;
             }
+        }
+
+        for (int i = 0; i < arrayOfCounters.length; i++) {
+            arrayOfCounters[i] = Math.max(arrayOfCounters[i] , lastMaxValue);
         }
 
         return arrayOfCounters;
