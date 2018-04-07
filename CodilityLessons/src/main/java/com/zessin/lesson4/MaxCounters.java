@@ -72,7 +72,7 @@ public class MaxCounters {
             int counterIndex = array[i] - 1;
 
             if (array[i] <= numberOfCounters) {
-                arrayOfCounters[counterIndex] = Math.max(arrayOfCounters[counterIndex] , lastMaxValue);
+                arrayOfCounters[counterIndex] = Math.max(arrayOfCounters[counterIndex], lastMaxValue);
                 arrayOfCounters[counterIndex]++;
                 maxValue = Math.max(arrayOfCounters[counterIndex], maxValue);
             } else {
@@ -81,7 +81,7 @@ public class MaxCounters {
         }
 
         for (int i = 0; i < arrayOfCounters.length; i++) {
-            arrayOfCounters[i] = Math.max(arrayOfCounters[i] , lastMaxValue);
+            arrayOfCounters[i] = Math.max(arrayOfCounters[i], lastMaxValue);
         }
 
         return arrayOfCounters;
